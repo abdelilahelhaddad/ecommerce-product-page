@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue / 16) + rem;
+}
+
+$font_family: 'Kumbh Sans',
+sans-serif;
+
+$Orange: hsl(26, 100%, 55%);
+$Pale-orange: hsl(25, 100%, 94%);
+
+$Very-vark-blue: hsl(220, 13%, 13%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+$Black-lightbox-background: hsl(0, 0%, 0%, 75%);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include font-size(16);
+}
