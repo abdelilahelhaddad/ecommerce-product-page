@@ -10,6 +10,7 @@
 
 body {
   font-size: 1rem;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .container {
@@ -71,11 +72,6 @@ header .product_carousel .arrows .container a .next {
 }
 
 header .product_carousel .product_images img {
-  display: none;
   width: 100vw;
-}
-
-header .product_carousel .product_images img.active {
-  display: block;
 }
 /*# sourceMappingURL=style.css.map */

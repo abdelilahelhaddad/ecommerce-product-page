@@ -27,6 +27,7 @@ $Black-lightbox-background: hsl(0, 0%, 0%);
 
 body {
   @include font-size(16);
+  font-family: $font_family;
 }
 
 .container {
@@ -91,12 +92,8 @@ header {
     .product_images {
 
       img {
-        display: none;
+        // display: none;
         width: 100vw;
-      }
-
-      img.active {
-        display: block;
       }
     }
   }
