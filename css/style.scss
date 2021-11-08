@@ -15,7 +15,7 @@ $Dark-grayish-blue: hsl(219, 9%, 45%);
 $Grayish-blue: hsl(220, 14%, 75%);
 $Light-grayish-blue: hsl(223, 64%, 98%);
 $White: hsl(0, 0%, 100%);
-$Black-lightbox-background: hsl(0, 0%, 0%, 75%);
+$Black-lightbox-background: hsl(0, 0%, 0%);
 
 *,
 *::after,
@@ -27,4 +27,77 @@ $Black-lightbox-background: hsl(0, 0%, 0%, 75%);
 
 body {
   @include font-size(16);
+}
+
+.container {
+  padding: 1.25rem;
+}
+
+header {
+  .navbar {
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .navbar_left {
+        .burger {
+          margin-right: 0.7rem;
+        }
+      }
+
+      .navbar_right {
+        .avatar {
+          margin-left: 1rem;
+
+          img {
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .product_carousel {
+    position: relative;
+
+    .arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+
+      .container {
+        justify-content: space-between;
+
+        a {
+          img {
+            position: absolute;
+            background: $White;
+            padding: 0.6rem 0.78rem;
+            border-radius: 50%;
+          }
+
+          .previous {
+            left: 5%;
+          }
+
+          .next {
+            right: 5%;
+          }
+        }
+      }
+    }
+
+    .product_images {
+
+      img {
+        display: none;
+        width: 100vw;
+      }
+
+      img.active {
+        display: block;
+      }
+    }
+  }
 }

@@ -11,4 +11,71 @@
 body {
   font-size: 1rem;
 }
+
+.container {
+  padding: 1.25rem;
+}
+
+header .navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navbar .container .navbar_left .burger {
+  margin-right: 0.7rem;
+}
+
+header .navbar .container .navbar_right .avatar {
+  margin-left: 1rem;
+}
+
+header .navbar .container .navbar_right .avatar img {
+  width: 1.5rem;
+}
+
+header .product_carousel {
+  position: relative;
+}
+
+header .product_carousel .arrows {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+header .product_carousel .arrows .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .product_carousel .arrows .container a img {
+  position: absolute;
+  background: white;
+  padding: 0.6rem 0.78rem;
+  border-radius: 50%;
+}
+
+header .product_carousel .arrows .container a .previous {
+  left: 5%;
+}
+
+header .product_carousel .arrows .container a .next {
+  right: 5%;
+}
+
+header .product_carousel .product_images img {
+  display: none;
+  width: 100vw;
+}
+
+header .product_carousel .product_images img.active {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
