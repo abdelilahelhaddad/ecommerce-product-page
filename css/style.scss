@@ -92,8 +92,110 @@ header {
     .product_images {
 
       img {
-        // display: none;
         width: 100vw;
+      }
+    }
+  }
+}
+
+#product_infos {
+  .container {
+    .brand {
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: $Orange;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      @include font-size(30);
+      color: $Very-vark-blue;
+      margin-bottom: 0.8rem;
+    }
+
+    .description {
+      @include font-size(15);
+      color: $Dark-grayish-blue;
+      margin-bottom: 1.2rem;
+    }
+
+    .pricing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+
+      .price {
+        display: flex;
+        align-items: center;
+
+        .new_price {
+          @include font-size(30);
+          font-weight: 700;
+          color: $Very-vark-blue;
+          margin-right: 0.7rem;
+        }
+
+        .discount {
+          color: $Orange;
+          background-color: $Pale-orange;
+          font-weight: 700;
+          padding: 0.3rem 0.5rem;
+          border-radius: 5px;
+        }
+      }
+
+      .old_price {
+        font-weight: 700;
+        text-decoration: line-through;
+        color: $Grayish-blue;
+      }
+    }
+
+    .add_cart {
+
+      .quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $Light-grayish-blue;
+        border-radius: 10px;
+
+        a {
+          padding: 1rem;
+
+          img {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .product_quantity {
+          font-weight: 700;
+          color: $Very-vark-blue;
+        }
+      }
+
+      .add_cart_btn {
+        display: flex;
+        margin: 1rem 0;
+        width: 100%;
+
+        a {
+          background-color: $Orange;
+          color: $White;
+          padding: 1rem;
+          border-radius: 10px;
+          text-decoration: none;
+          font-weight: 700;
+          text-align: center;
+          width: 100%;
+
+          svg {
+            margin-right: 0.5rem;
+          }
+        }
       }
     }
   }
