@@ -44,6 +44,36 @@ header {
         .burger {
           margin-right: 0.7rem;
         }
+
+        .show.menu {
+          display: none;
+        }
+
+        .menu {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 30%;
+          z-index: 99;
+          background-color: $White;
+          list-style: none;
+          padding: 1.25rem;
+
+          .close_menu {
+            margin-bottom: 2.5rem;
+          }
+
+          li {
+            margin-bottom: 1.5rem;
+
+            a {
+              text-decoration: none;
+              color: $Very-vark-blue;
+              font-weight: 700;
+            }
+          }
+        }
       }
 
       .navbar_right {
@@ -191,6 +221,7 @@ header {
           font-weight: 700;
           text-align: center;
           width: 100%;
+          box-shadow: 0px 15px 41px 0px $Pale-orange;
 
           svg {
             margin-right: 0.5rem;

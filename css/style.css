@@ -30,6 +30,36 @@ header .navbar .container .navbar_left .burger {
   margin-right: 0.7rem;
 }
 
+header .navbar .container .navbar_left .show.menu {
+  display: none;
+}
+
+header .navbar .container .navbar_left .menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 30%;
+  z-index: 99;
+  background-color: white;
+  list-style: none;
+  padding: 1.25rem;
+}
+
+header .navbar .container .navbar_left .menu .close_menu {
+  margin-bottom: 2.5rem;
+}
+
+header .navbar .container .navbar_left .menu li {
+  margin-bottom: 1.5rem;
+}
+
+header .navbar .container .navbar_left .menu li a {
+  text-decoration: none;
+  color: #1d2025;
+  font-weight: 700;
+}
+
 header .navbar .container .navbar_right .avatar {
   margin-left: 1rem;
 }
@@ -187,6 +217,8 @@ header .product_carousel .product_images img {
   font-weight: 700;
   text-align: center;
   width: 100%;
+  -webkit-box-shadow: 0px 15px 41px 0px #ffede0;
+          box-shadow: 0px 15px 41px 0px #ffede0;
 }
 
 #product_infos .container .add_cart .add_cart_btn a svg {
