@@ -46,10 +46,11 @@ header {
         }
 
         .show.menu {
-          display: none;
+          display: block;
         }
 
         .menu {
+          display: none;
           position: fixed;
           top: 0;
           bottom: 0;
@@ -123,6 +124,30 @@ header {
 
       img {
         width: 100vw;
+      }
+    }
+
+    .cart_model {
+      position: absolute;
+      top: 5%;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
+      background-color: $White;
+      color: $Very-vark-blue;
+      font-weight: 700;
+      border-radius: 10px;
+      width: 96%;
+
+      .title {
+        border-bottom: 1px solid $Grayish-blue;
+      }
+
+      .body {
+        padding: 25% 0;
+        text-align: center;
+        color: $Dark-grayish-blue;
       }
     }
   }

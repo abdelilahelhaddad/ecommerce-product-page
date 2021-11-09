@@ -19,3 +19,18 @@ function showImg(e) {
   }
   img[indexValue - 1].style.display = "block";
 }
+
+const openMenu = document.querySelector('.burger');
+const closeMenu = document.querySelector('.close_menu');
+const menu = document.querySelector('.menu');
+const overflowHidden = document.querySelector('body');
+
+openMenu.addEventListener('click', () => {
+  menu.classList.add('show');
+  overflowHidden.style.overflow = 'hidden';
+});
+
+closeMenu.addEventListener('click', () => {
+  menu.classList.remove('show');
+  overflowHidden.style.overflow = 'visible';
+});
