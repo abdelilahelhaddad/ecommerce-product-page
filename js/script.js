@@ -41,3 +41,28 @@ const cartModel = document.querySelector('.cart_model');
 openCart.addEventListener('click', () => {
   cartModel.classList.toggle('show');
 });
+
+const decreaseProductQtty = document.querySelector('.minus');
+const increaseProductQtty = document.querySelector('.plus');
+let productQuantity = document.querySelector('.product_quantity');
+
+productQuantityValue = parseInt(productQuantity.textContent);
+
+console.log(typeof (productQuantityValue));
+
+decreaseProductQtty.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (productQuantityValue <= 0) {
+    productQuantityValue = 0;
+    productQuantity.textContent = productQuantityValue;
+  } else {
+    productQuantityValue = productQuantityValue - 1;
+    productQuantity.textContent = productQuantityValue;
+  }
+});
+
+increaseProductQtty.addEventListener('click', (e) => {
+  e.preventDefault();
+  productQuantityValue = productQuantityValue + 1;
+  productQuantity.textContent = productQuantityValue;
+});
