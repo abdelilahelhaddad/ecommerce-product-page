@@ -127,7 +127,12 @@ header {
       }
     }
 
+    .show.cart_model {
+      display: block;
+    }
+
     .cart_model {
+      display: none;
       position: absolute;
       top: 5%;
       bottom: 10%;

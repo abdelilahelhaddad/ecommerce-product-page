@@ -34,3 +34,10 @@ closeMenu.addEventListener('click', () => {
   menu.classList.remove('show');
   overflowHidden.style.overflow = 'visible';
 });
+
+const openCart = document.querySelector('.cart');
+const cartModel = document.querySelector('.cart_model');
+
+openCart.addEventListener('click', () => {
+  cartModel.classList.toggle('show');
+});

@@ -106,7 +106,12 @@ header .product_carousel .product_images img {
   width: 100vw;
 }
 
+header .product_carousel .show.cart_model {
+  display: block;
+}
+
 header .product_carousel .cart_model {
+  display: none;
   position: absolute;
   top: 5%;
   bottom: 10%;
