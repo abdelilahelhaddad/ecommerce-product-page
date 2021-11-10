@@ -61,6 +61,23 @@ header .navbar .container .navbar_left .menu li a {
   font-weight: 700;
 }
 
+header .navbar .container .navbar_right .cart {
+  text-decoration: none;
+  position: relative;
+}
+
+header .navbar .container .navbar_right .cart span {
+  position: absolute;
+  top: -55%;
+  right: -25%;
+  background-color: #ff7d1a;
+  color: white;
+  border-radius: 100vW;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.04rem 0.4rem;
+}
+
 header .navbar .container .navbar_right .avatar {
   margin-left: 1rem;
 }
@@ -119,8 +136,6 @@ header .product_carousel .cart_model {
           transform: translateX(-50%);
   max-height: 100%;
   background-color: white;
-  color: #1d2025;
-  font-weight: 700;
   border-radius: 10px;
   width: 96%;
   -webkit-box-shadow: 0px 10px 30px 0px #68707d;
@@ -129,6 +144,7 @@ header .product_carousel .cart_model {
 
 header .product_carousel .cart_model .cart_title {
   border-bottom: 1px solid #b6bcc8;
+  font-weight: 700;
 }
 
 header .product_carousel .cart_model .cart_body {
@@ -148,10 +164,37 @@ header .product_carousel .cart_model .cart_body .container .product_in_cart .pro
   border-radius: 7px;
 }
 
+header .product_carousel .cart_model .cart_body .container .product_in_cart .cart_infos {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #68707d;
+}
+
+header .product_carousel .cart_model .cart_body .container .product_in_cart .cart_infos .product_title {
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  width: 85%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 header .product_carousel .cart_model .cart_body .container .product_in_cart .cart_infos .pricing {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header .product_carousel .cart_model .cart_body .container .product_in_cart .cart_infos .pricing .total {
+  color: #1d2025;
+  font-weight: 700;
+}
+
+header .product_carousel .cart_model .cart_body .container .product_in_cart .delete_product {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 header .product_carousel .cart_model .cart_body .container .checkout_btn {
