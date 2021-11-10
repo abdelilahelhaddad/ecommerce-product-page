@@ -48,8 +48,6 @@ let productQuantity = document.querySelector('.product_quantity');
 
 productQuantityValue = parseInt(productQuantity.textContent);
 
-console.log(typeof (productQuantityValue));
-
 decreaseProductQtty.addEventListener('click', (e) => {
   e.preventDefault();
   if (productQuantityValue <= 0) {
