@@ -469,6 +469,44 @@ header {
 
     #product_infos {
       width: 50%;
+      align-self: center;
+
+      .container {
+
+        .title {
+          margin-top: 1rem;
+          @include font-size(38);
+        }
+
+        .description {
+          margin-top: 2rem;
+        }
+
+        .pricing {
+          display: block;
+          margin-top: 1.5rem;
+
+          .old_price {
+            margin-top: 0.5rem;
+          }
+        }
+
+        .add_cart {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1.5rem;
+
+          .quantity {
+            flex: 2;
+            padding: 0.5rem 0;
+            margin: 1rem;
+          }
+
+          .add_cart_btn {
+            flex: 4;
+          }
+        }
+      }
     }
   }
 }
