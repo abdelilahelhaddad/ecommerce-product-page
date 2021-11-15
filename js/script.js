@@ -64,3 +64,22 @@ increaseProductQtty.addEventListener('click', (e) => {
   productQuantityValue = productQuantityValue + 1;
   productQuantity.textContent = productQuantityValue;
 });
+
+
+
+let thumbnails = document.querySelectorAll('.product_image_thumbnail')
+let productImage = document.querySelector('.product_image')
+let activeImages = document.querySelectorAll('.active')
+
+for (var i = 0; i < thumbnails.length; i++) {
+  thumbnails[i].addEventListener('click', function () {
+    console.log(activeImages)
+
+    if (activeImages.length > 0) {
+      activeImages[0].classList.remove('active')
+    }
+
+    this.classList.add('active')
+    productImage.src = this.src
+  })
+}
