@@ -450,17 +450,10 @@ header .navbar .container .navbar_right .avatar img {
   }
   .product_page_content .product_carousel .product_slider .product_images_thumbnail a.active {
     border: 3px solid #ff7d1a;
-    border-radius: 14px;
+    border-radius: 12px;
   }
-  .product_page_content .product_carousel .product_slider .product_images_thumbnail a.active::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.5);
+  .product_page_content .product_carousel .product_slider .product_images_thumbnail a.active img {
+    opacity: 0.5;
   }
   .product_page_content .product_carousel .cart_model {
     top: -18%;
