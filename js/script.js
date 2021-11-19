@@ -70,7 +70,8 @@ let productImage = document.querySelector('.product_image')
 let activeImages = document.querySelectorAll('.active')
 
 for (var i = 0; i < thumbnails.length; i++) {
-  thumbnails[i].addEventListener('click', function () {
+  thumbnails[i].addEventListener('click', function (e) {
+    e.preventDefault();
     //Remove active class
     [...document.querySelectorAll('.thumbnail')]
     .map(x => x.classList.remove('active'));

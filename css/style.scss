@@ -148,6 +148,22 @@ header {
 
     .product_images_thumbnail {
       display: none;
+
+      a:hover {
+
+        img {
+          opacity: 0.5;
+        }
+      }
+
+      a.active {
+        border: 3px solid $Orange;
+        border-radius: 12px;
+
+        img {
+          opacity: 0.5;
+        }
+      }
     }
 
     .show.cart_model {
@@ -173,8 +189,6 @@ header {
       }
 
       .cart_body {
-        // padding: 25% 0;
-        // text-align: center;
         color: $Dark-grayish-blue;
 
         .container {
@@ -308,6 +322,12 @@ header {
               display: flex;
               align-items: center;
             }
+
+            &:hover {
+              img {
+                opacity: 0.5;
+              }
+            }
           }
 
           .product_quantity {
@@ -334,6 +354,10 @@ header {
 
             svg {
               margin-right: 0.5rem;
+            }
+
+            &:hover {
+              opacity: 0.5;
             }
           }
         }
@@ -463,15 +487,6 @@ header {
               border-radius: 8px;
             }
 
-          }
-
-          a.active {
-            border: 3px solid $Orange;
-            border-radius: 12px;
-
-            img {
-              opacity: 0.5;
-            }
           }
         }
       }
