@@ -7,7 +7,7 @@ function side_slide(e) {
 
 function showImg(e) {
   var i;
-  const img = document.querySelectorAll('.product_image')
+  const img = document.querySelectorAll('.product_image');
   if (e > img.length) {
     indexValue = 1;
   }
