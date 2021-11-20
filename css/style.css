@@ -89,6 +89,12 @@ header .navbar .container .navbar_right .avatar {
 
 header .navbar .container .navbar_right .avatar img {
   width: 1.5rem;
+  border: 2px solid transparent;
+}
+
+header .navbar .container .navbar_right .avatar img:hover {
+  border: 2px solid #ff7d1a;
+  border-radius: 50%;
 }
 
 .product_page_content .product_carousel {
@@ -442,10 +448,6 @@ header .navbar .container .navbar_right .avatar img {
   }
   header .navbar .container .navbar_right .avatar img {
     width: 2.5rem;
-  }
-  header .navbar .container .navbar_right .avatar img:hover {
-    border: 2px solid #ff7d1a;
-    border-radius: 50%;
   }
   .product_page_content {
     display: -webkit-box;

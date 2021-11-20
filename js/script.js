@@ -77,7 +77,6 @@ for (var i = 0; i < thumbnails.length; i++) {
     .map(x => x.classList.remove('active'));
     //Add active class
     this.parentElement.classList.add('active');
-    //Add active class
     //Change product image after clicking thumbnail
     productImage.src = this.src;
   })
@@ -111,7 +110,7 @@ addCartBTN.addEventListener('click', (e) => {
                 </div>
               </div>
               <div class="delete_product">
-                <img src="./images/icon-delete.svg" alt="Icon Delete">
+                <img class="delete_icon" src="./images/icon-delete.svg" alt="Icon Delete">
               </div>
             </div>
             <div class="checkout_btn">
@@ -123,3 +122,13 @@ addCartBTN.addEventListener('click', (e) => {
     QttyOfCartProducts.textContent = productQttyValue;
   }
 });
+
+//Remove the product from the cart 
+
+AddProductToCart.addEventListener('click', (e) => {
+  if (e.target.classList.contains("delete_icon")) {
+    e.target.parentElement.parentElement.parentElement.remove();
+    emptyCart.style.display = 'flex';
+    QttyOfCartProducts.style.display = 'none';
+  }
+})
