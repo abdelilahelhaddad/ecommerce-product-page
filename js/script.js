@@ -82,3 +82,44 @@ for (var i = 0; i < thumbnails.length; i++) {
     productImage.src = this.src;
   })
 }
+
+const addCartBTN = document.querySelector('.add_cart_btn');
+const productQTTY = document.querySelector('.product_quantity');
+const emptyCart = document.querySelector('.empty_cart');
+const AddProductToCart = document.querySelector('.add_product');
+const productNewPrice = document.querySelector('.new_price');
+const QttyOfCartProducts = document.querySelector('.cart span');
+
+addCartBTN.addEventListener('click', (e) => {
+  e.preventDefault();
+  productQttyValue = parseInt(productQTTY.textContent);
+  if (productQttyValue == 0) {
+    emptyCart.style.display = 'flex';
+  } else {
+    emptyCart.style.display = 'none';
+    let AddProduct = document.createElement('div');
+    AddProduct.innerHTML = `
+    <div class="product_in_cart">
+              <img class="product_image_in_cart" src="./images/image-product-1-thumbnail.jpg" alt="Product Image">
+              <div class="cart_infos">
+                <p class="product_title">Fall Limited Edition Sneakers</p>
+                <div class="pricing">
+                  <p class="price">${productNewPrice.textContent}</p>&nbsp;
+                  <span>x</span>&nbsp;
+                  <p class="quantity">${productQttyValue}</p>&nbsp;
+                  <p class="total">$${parseInt((productNewPrice.textContent).substr(1))*parseInt(productQttyValue)}</p>
+                </div>
+              </div>
+              <div class="delete_product">
+                <img src="./images/icon-delete.svg" alt="Icon Delete">
+              </div>
+            </div>
+            <div class="checkout_btn">
+              <a href="#">Checkout</a>
+            </div>
+      `;
+    AddProductToCart.appendChild(AddProduct);
+    QttyOfCartProducts.style.display = 'block';
+    QttyOfCartProducts.textContent = productQttyValue;
+  }
+});
