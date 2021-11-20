@@ -10,7 +10,7 @@ sans-serif;
 $Orange: hsl(26, 100%, 55%);
 $Pale-orange: hsl(25, 100%, 94%);
 
-$Very-vark-blue: hsl(220, 13%, 13%);
+$Very-vark-blue: hsl(218, 12%, 13%);
 $Dark-grayish-blue: hsl(219, 9%, 45%);
 $Grayish-blue: hsl(220, 14%, 75%);
 $Light-grayish-blue: hsl(223, 64%, 98%);
@@ -83,6 +83,7 @@ header {
           position: relative;
 
           span {
+            display: none;
             position: absolute;
             top: -55%;
             right: -25%;
@@ -92,6 +93,14 @@ header {
             @include font-size(12);
             font-weight: 700;
             padding: 0.04rem 0.4rem;
+          }
+
+          &:hover {
+            svg {
+              path {
+                fill: #69707D;
+              }
+            }
           }
         }
 
@@ -181,7 +190,7 @@ header {
       background-color: $White;
       border-radius: 10px;
       width: 96%;
-      box-shadow: 0px 10px 30px 0px $Dark-grayish-blue;
+      box-shadow: 0px 17px 18px 0px $Grayish-blue;
 
       .cart_title {
         border-bottom: 1px solid $Grayish-blue;
@@ -192,6 +201,12 @@ header {
         color: $Dark-grayish-blue;
 
         .container {
+          .empty_cart {
+            display: flex;
+            justify-content: center;
+            padding: 3.5rem 0;
+          }
+
           .product_in_cart {
             display: flex;
             margin-top: 0.5rem;
@@ -227,6 +242,7 @@ header {
 
             .delete_product {
               align-self: center;
+              cursor: pointer;
             }
           }
 
