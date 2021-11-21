@@ -132,3 +132,9 @@ AddProductToCart.addEventListener('click', (e) => {
     QttyOfCartProducts.style.display = 'none';
   }
 })
+
+const productImages = document.querySelector('.product_images');
+
+productImages.addEventListener('click', () => {
+
+});

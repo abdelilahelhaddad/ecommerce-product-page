@@ -554,4 +554,82 @@ header .navbar .container .navbar_right .avatar img:hover {
             flex: 4;
   }
 }
+
+.product_lightbox {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.product_lightbox .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.product_lightbox .container svg {
+  margin-left: 27rem;
+}
+
+.product_lightbox .container .lb_product_slider {
+  margin-top: 2rem;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images .lb_product_image {
+  width: 28rem;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 12px;
+  background-color: white;
+  background-blend-mode: screen;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail:hover img {
+  opacity: 0.5;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail.active {
+  border: 3px solid #ff7d1a;
+}
+
+.product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail.active img {
+  opacity: 0.5;
+}
 /*# sourceMappingURL=style.css.map */
