@@ -144,3 +144,43 @@ productImages.addEventListener('click', () => {
 closeLightbox.addEventListener('click', () => {
   productLightbox.style.display = 'none';
 });
+
+//Lightbox slider
+
+var indexValue = 1;
+showImgLb(indexValue);
+
+function side_slide_lb(e) {
+  showImgLb(indexValue += e)
+}
+
+function showImgLb(e) {
+  var i;
+  const img = document.querySelectorAll('.lb_product_image');
+  if (e > img.length) {
+    indexValue = 1;
+  }
+  if (e < 1) {
+    indexValue = img.length;
+  }
+  for (i = 0; i < img.length; i++) {
+    img[i].style.display = "none";
+  }
+  img[indexValue - 1].style.display = "block";
+}
+
+let lbThumbnails = document.querySelectorAll('.lb_product_image_thumbnail');
+let lbProductImage = document.querySelector('.lb_product_image');
+
+for (var i = 0; i < lbThumbnails.length; i++) {
+  lbThumbnails[i].addEventListener('click', function (e) {
+    e.preventDefault();
+    //Remove active class
+    [...document.querySelectorAll('.lb_thumbnail')]
+    .map(x => x.classList.remove('active'));
+    //Add active class
+    this.parentElement.classList.add('active');
+    //Change product image after clicking thumbnail
+    lbProductImage.src = this.src;
+  })
+}
