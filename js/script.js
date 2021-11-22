@@ -138,7 +138,11 @@ const productLightbox = document.querySelector('.product_lightbox');
 const closeLightbox = document.querySelector('.close_lightbox');
 
 productImages.addEventListener('click', () => {
-  productLightbox.style.display = 'block';
+  if (window.screen.width < 768) {
+    productLightbox.style.display = 'none';
+  } else {
+    productLightbox.style.display = 'block';
+  }
 });
 
 closeLightbox.addEventListener('click', () => {
