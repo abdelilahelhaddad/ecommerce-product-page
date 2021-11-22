@@ -134,7 +134,13 @@ AddProductToCart.addEventListener('click', (e) => {
 })
 
 const productImages = document.querySelector('.product_images');
+const productLightbox = document.querySelector('.product_lightbox');
+const closeLightbox = document.querySelector('.close_lightbox');
 
 productImages.addEventListener('click', () => {
+  productLightbox.style.display = 'block';
+});
 
+closeLightbox.addEventListener('click', () => {
+  productLightbox.style.display = 'none';
 });

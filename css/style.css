@@ -584,13 +584,42 @@ header .navbar .container .navbar_right .avatar img:hover {
   height: 100vh;
 }
 
-.product_lightbox .container svg {
+.product_lightbox .container .close_lightbox {
+  position: relative;
+  z-index: 99;
   margin-left: 24rem;
   cursor: pointer;
 }
 
 .product_lightbox .container .lb_product_slider {
   margin-top: 1rem;
+}
+
+.product_lightbox .container .lb_product_slider .lb_arrows {
+  position: absolute;
+  top: -7%;
+  width: 25rem;
+}
+
+.product_lightbox .container .lb_product_slider .lb_arrows .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product_lightbox .container .lb_product_slider .lb_arrows .container a img {
+  position: absolute;
+  background: white;
+  padding: 0.6rem 0.78rem;
+  border-radius: 50%;
+}
+
+.product_lightbox .container .lb_product_slider .lb_arrows .container a .lb_previous {
+  left: -5%;
+}
+
+.product_lightbox .container .lb_product_slider .lb_arrows .container a .lb_next {
+  right: -5%;
 }
 
 .product_lightbox .container .lb_product_slider .lb_product_images .lb_product_image {
@@ -616,6 +645,8 @@ header .navbar .container .navbar_right .avatar img:hover {
   border-radius: 12px;
   background-color: white;
   background-blend-mode: screen;
+  position: relative;
+  z-index: 99;
 }
 
 .product_lightbox .container .lb_product_slider .lb_product_images_thumbnail .lb_thumbnail img {
