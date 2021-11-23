@@ -421,6 +421,10 @@ header .navbar .container .navbar_right .avatar img:hover {
   cursor: pointer;
 }
 
+.product_lightbox .container .close_lightbox:hover path {
+  fill: #ff7d1a;
+}
+
 .product_lightbox .container .lb_product_slider {
   margin-top: 1rem;
 }

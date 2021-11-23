@@ -413,6 +413,12 @@ header {
       z-index: 99;
       margin-left: 24rem;
       cursor: pointer;
+
+      &:hover {
+        path {
+          fill: $Orange;
+        }
+      }
     }
 
     .lb_product_slider {
